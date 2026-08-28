@@ -23,7 +23,7 @@ if (res)
      playerwincount++;
      urscore.innerHTML="You : "+ playerwincount;
      notify.innerHTML="You Won, Hurrayyyy!!!";
-     notify.style.backgroundColor="green";
+     notify.style.backgroundColor=" green";
 
 }
 else if (res==null)
@@ -38,8 +38,6 @@ else
      compscore.innerHTML="Computer : "+compwincount;
      notify.innerHTML="You Lost, Shame on you";
      notify.style.backgroundColor="red";
-
-
 }
 }
 
