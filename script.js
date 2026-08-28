@@ -5,6 +5,7 @@ let rps=["rock","paper","scissors"];
 let playerwincount=0,compwincount=0;
 let urscore=document.getElementById("urscore");
 let compscore=document.getElementById("compscore");
+let notify=document.getElementById("notify");
 function checkPlayerWin(randomnum)
 {
     if (rock.id=="rock"&&rps[randomnum]=="scissors") return true;
@@ -21,18 +22,32 @@ if (res)
 {
      playerwincount++;
      urscore.innerHTML="You : "+ playerwincount;
+     notify.innerHTML="You Won, Hurrayyyy!!!";
+     notify.style.backgroundColor="green";
+
 }
 else if (res==null)
 {
-console.log("Draw");
+     notify.innerHTML="It's a DRAW, bach gae";
+     notify.style.backgroundColor="grey";
+     
 }
 else 
 {
     compwincount++;
      compscore.innerHTML="Computer : "+compwincount;
+     notify.innerHTML="You Lost, Shame on you";
+     notify.style.backgroundColor="red";
+
 
 }
 }
+
 rock.addEventListener("click",Func);
 paper.addEventListener("click",Func);
 scissors.addEventListener("click",Func);
+let resetbtn=document.getElementById("resetbtn");
+resetbtn.addEventListener("click",function()
+{
+location.reload();
+});
